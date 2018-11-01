@@ -1,53 +1,17 @@
-# egg-react-webpack-boilerplate
+# egg-react-webpack-ant-boilerplate
 
-基于 Egg + React + Webpack4 多页面和单页面服务器渲染同构工程骨架项目, 文档请见: [Egg+React解决方案](https://www.yuque.com/easy-team/res)
+Egg + AntD Singe Page Application
 
-- Egg 版本： ^2.x.x
-- Node 版本: Node ^8.x.x+,  Node 6.x.x 版本请见 [Egg 1.0 + Node6分支](https://github.com/easy-team/egg-react-webpack-boilerplate/tree/node6)
-- Webpack 版本: ^4.x.x, 对应 `easywebpack-react` 版本为 4.x.x,  Webpack3 版本项目骨架请见 `webpack3` 分支, 对应 `easywebpack-react` 版本为 3.x.x
-- React 版本: ^15.0.0, ^16.0.0, 
-- 最新变更说明: [RELEASE](RELEASE.md)
-- 骨架功能性需求或者Bug问题, 欢迎大家 PR 完善
-- 如果你需要了解 Egg + React + Webpack 项目更多信息，请扫以下二维码加 QQ 好友，请备注：Node.js
-![hubcarl](https://avatars3.githubusercontent.com/u/4983042?v=4&u=0befb64a57a7911c630b7f97df5632385b08da2a&s=250)
+## 特性
 
-## 版本
+- React-Router, React-Redux 服务端/客户端单页面渲染
 
-因该项目包含了多种实现, 提供多种例子实现，为防干扰, 特提供了两个纯净版本分支用于实际项目开发, 请自行选用。
-
-- Egg2 + React 多页面服务端渲染分支 [feature/green/multi](https://github.com/easy-team/egg-react-webpack-boilerplate/tree/feature/green/multi)
-- Egg2 + React + React Router + Redux + React-Redux 单页面服务端渲染分支 [feature/green/spa](https://github.com/easy-team/egg-react-webpack-boilerplate/tree/feature/green/spa)
-
-可以通过 [easywebpack-cli](https://github.com/hubcarl/easywebpack-cli) 命令行初始化对应类型项目。 
+- 支持 AntD 按需加载和主题定制
 
 ## 文档
 
 - https://www.yuque.com/easy-team/egg-react
 - https://zhuanlan.zhihu.com/easywebpack
-
-## 特性
-
-- 基于 React 多页面/单页面服务端客户端同构实现
-
-- 基于 easywebpack 基础配置, 使用 es6 class 继承方式编写 webpack 配置
-
-- 支持 server 和 client 端代码修改, webpack时时编译和热更新, `npm start` 一键启动应用
-
-- 支持服务端渲染 `render` 和纯前端渲染 `renderClient`
-
-- 支持自动根据 jsx 文件构建 webpack entry 入口文件
-
-- 支持 css, sass, scss, less, stylus
-
-- 支持 css module , 且同时支持 css 和 css module 共存的情况
-
-- 支持 react-router, react-redux 服务端/客户端单页面渲染
-
-- egg-webpack ^3.2.4 版本开始支持多进程编译
-
-- easywebpack ^3.5.0 版本开始支持 webpack dll 自动化构建, 与多进程编译结合，构建速度减少 2/3
-
-- Node 8 版本的async和await特性, Controller 采用 class 方式编写
 
 
 ## 依赖
@@ -64,18 +28,13 @@
 
 ## 使用
 
-#### 安装cli
 
-```bash
-npm install easywebpack-cli -g
-```
 
 #### 安装依赖
 
 ```bash
 npm install
 ```
-
 
 #### 本地开发启动应用
 
@@ -101,20 +60,6 @@ npm run build
 ```bash
 npm start 
 ```
-
-### 配置说明
-
-
-```js
-`config/config.local.js` 
-const EasyWebpack = require('easywebpack-react');
-exports.webpack = {
-  webpackConfigList: EasyWebpack.getWebpackConfig()
-};
-```
-
-构建会同时启动两个webpack构建服务, 客户端js构建(build/client), 服务端构建(build/server), 默认端口9000,  webpackConfigList 端口依次递增. 
-
 
 #### 项目构建
 

@@ -8,7 +8,7 @@ export default class Header extends Component {
   render() {
     return <header className="header">
       <div className="container">
-        <h1>Egg + React</h1>
+        <h1>Egg + React + AntD</h1>
       </div>
     </header>;
   }
